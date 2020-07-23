@@ -1,6 +1,6 @@
 "use strict";
 
-const auth_server = "https://auth.iudx.org.in";
+const auth_server = "https://auth.datasetu.org";
 
 let dots;
 let code;
