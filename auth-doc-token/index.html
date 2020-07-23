@@ -32,7 +32,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 <span class="Statement">Endpoint</span>:
 
-	<a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token>https://auth.iudx.org.in/auth/v1/token</a>
+	<a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token>https://auth.datasetu.org/auth/v1/token</a>
 
 <span class="Statement">Description</span>:
 
@@ -162,7 +162,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 		<span class="Statement">Request</span>:
 
-			curl -XPOST <a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token>https://auth.iudx.org.in/auth/v1/token</a>
+			curl -XPOST <a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token>https://auth.datasetu.org/auth/v1/token</a>
 
 			--cert certificate.pem --key private-key.pem
 
@@ -181,7 +181,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 			content-type : <span class="Constant">&quot;application/json&quot;</span>
 
 			<span class="rainbow_p0">{</span>
-				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.iudx.org.in/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_o0">,</span>
+				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;token-type&quot;</span>	: <span class="Constant">&quot;IUDX&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;expires-in&quot;</span>	: <span class="Constant">3600</span><span class="rainbow_o0">,</span>
 
@@ -203,7 +203,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 				<span class="Constant">3.</span> Random string
 
 			<span class="Statement">In the above example</span>:
-				token = <span class="Constant">&quot;auth.iudx.org.in/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span>
+				token = <span class="Constant">&quot;auth.datasetu.org/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span>
 
 		<span class="Constant">2.</span> expires-in
 			Indicates how <span class="Type">long</span> the token is valid in seconds.
@@ -218,7 +218,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 		<span class="Statement">Request</span>:
 
-			curl -XPOST <a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token>https://auth.iudx.org.in/auth/v1/token</a>
+			curl -XPOST <a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token>https://auth.datasetu.org/auth/v1/token</a>
 
 				--cert certificate.pem --key private-key.pem
 
@@ -236,7 +236,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 			content-type : <span class="Constant">&quot;application/json&quot;</span>
 
 			<span class="rainbow_p0">{</span>
-				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.iudx.org.in/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span><span class="rainbow_o0">,</span>
+				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;token-type&quot;</span>	: <span class="Constant">&quot;IUDX&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;expires-in&quot;</span>	: <span class="Constant">3600</span><span class="rainbow_o0">,</span>
 
@@ -261,7 +261,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 				along with the consumer's <span class="Constant">&quot;token&quot;</span>.
 
 				<span class="Statement">In the above example</span>:
-					token = <span class="Constant">&quot;auth.iudx.org.in/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
+					token = <span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
 
 				and the <span class="Constant">&quot;server-token&quot;</span> when a consumer requests data from:
 
@@ -274,13 +274,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 <span class="Statement">See also</span>:
 
 	<span class="Statement">token introspect API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/token-introspect.html>http://auth.iudx.org.in/token-introspect.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/token-introspect.html>http://auth.datasetu.org/token-introspect.html</a>
 
 	<span class="Statement">token revoke API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/token-revoke.html>http://auth.iudx.org.in/token-revoke.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/token-revoke.html>http://auth.datasetu.org/token-revoke.html</a>
 
 	<span class="Statement">token revoke all API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/token-revoke-all.html>http://auth.iudx.org.in/token-revoke-all.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/token-revoke-all.html>http://auth.datasetu.org/token-revoke-all.html</a>
 
 
 </pre>

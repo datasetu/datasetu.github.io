@@ -3,47 +3,23 @@
 	<head>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 		<meta content="utf-8" http-equiv="encoding"/>
-		<link rel="stylesheet" href="json-viewer.css"/>
-		<link rel="stylesheet" href="my.css"/>
+		<link rel="stylesheet" href="../ui/json-viewer.css"/>
+		<link rel="stylesheet" href="../ui/my.css"/>
 		<script src="json-viewer.min.js"></script>
 		<script>
-			var api = "group/add";
+			var api = "certificate-info";
 		</script>
-		<script src="my.js"></script>
+		<script src="../ui/my.js"></script>
 	</head>
 	<body onLoad="init();">
 		<div class="center-screen">
-			<h2><code>API : /auth/v1/group/add<span id=dots style="visibility:hidden"> ...</span></code></h2>
+			<h2><code>API : /auth/v1/certificate-info<span id=dots style="visibility:hidden"> ...</span></code></h2>
 			<table>
 			<tr><td align=center>
 			<form id=request onsubmit="return false;">
 				<fieldset>
 					<legend><b><code> Request </code></b></legend>
 					<table>
-						<tr>
-							<td style="padding:15px" align=right>
-								<code>consumer<font color=red>*</font></code>
-							</td>
-							<td>
-								<input autofocus name=consumer type=text placeholder=" consumer's email id">
-							</td>
-						</tr>
-						<tr>
-							<td style="padding:15px" align=right>
-								<code>group<font color=red>*</font></code>
-							</td>
-							<td>
-								<input name=group type=text placeholder=" the group name">
-							</td>
-						</tr>
-						<tr>
-							<td style="padding:15px" align=right>
-								<code>valid-till<font color=red>*</font></code>
-							</td>
-							<td>
-								<input name=valid_till type=text placeholder=" in hours">
-							</td>
-						</tr>
 						<tr>
 							<td colspan=2 align="center" style="padding:15px">
 							<button id="button" class="button" onClick='call(api);'>

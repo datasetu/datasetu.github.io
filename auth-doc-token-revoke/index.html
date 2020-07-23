@@ -30,7 +30,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 <span class="Statement">Endpoint</span>:
 
-	<a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token/revoke>https://auth.iudx.org.in/auth/v1/token/revoke</a>
+	<a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token/revoke>https://auth.datasetu.org/auth/v1/token/revoke</a>
 
 <span class="Statement">Description</span>:
 
@@ -76,7 +76,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 	# as a data consumer
 	iudx_auth		= auth.Auth<span class="rainbow_p0">(</span><span class="Constant">&quot;consumer-certificate.pem&quot;</span><span class="rainbow_o0">,</span><span class="Constant">&quot;private-key.pem&quot;</span><span class="rainbow_p0">)</span>
-	tokens_to_revoke	= <span class="rainbow_p0">[</span><span class="Constant">&quot;auth.iudx.org.in/email-id@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">]</span>
+	tokens_to_revoke	= <span class="rainbow_p0">[</span><span class="Constant">&quot;auth.datasetu.org/email-id@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">]</span>
 
 	iudx_auth.revoke_tokens<span class="rainbow_p0">(</span>tokens_to_revoke<span class="rainbow_p0">)</span>
 
@@ -90,13 +90,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 	<span class="Statement">Request</span>:
 
-		curl -XPOST <a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token/revoke>https://auth.iudx.org.in/auth/v1/token/revoke</a>
+		curl -XPOST <a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token/revoke>https://auth.datasetu.org/auth/v1/token/revoke</a>
 
 		--cert certificate.pem --key private-key.pem
 
 		-H 'content-type: application/json'
 
-		-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;tokens&quot;</span> : <span class="rainbow_p1">[</span><span class="Constant">&quot;auth.iudx.org.in/email-id@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p1">]</span><span class="rainbow_p0">}</span>
+		-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;tokens&quot;</span> : <span class="rainbow_p1">[</span><span class="Constant">&quot;auth.datasetu.org/email-id@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p1">]</span><span class="rainbow_p0">}</span>
 
 
 	<span class="Statement">Response</span>:
@@ -111,10 +111,10 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 <span class="Statement">See also</span>:
 
 	<span class="Statement">audit tokens API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/audit-tokens.html>http://auth.iudx.org.in/audit-tokens.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/audit-tokens.html>http://auth.datasetu.org/audit-tokens.html</a>
 
 	<span class="Statement">token revoke all API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/token-revoke-all.html>http://auth.iudx.org.in/token-revoke-all.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/token-revoke-all.html>http://auth.datasetu.org/token-revoke-all.html</a>
 
 
 </pre>

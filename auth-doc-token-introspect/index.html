@@ -35,7 +35,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 <span class="Statement">Endpoint</span>:
 
-	<a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token/introspect>https://auth.iudx.org.in/auth/v1/token/introspect</a>
+	<a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token/introspect>https://auth.datasetu.org/auth/v1/token/introspect</a>
 
 <span class="Statement">Description</span>:
 
@@ -135,7 +135,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 		<span class="Constant">3.</span> Random string
 
 	<span class="Statement">For example</span>:
-		<span class="Constant">&quot;auth.iudx.org.in/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
+		<span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
 
 	<span class="Statement">NOTE</span>:
 	It is important <span class="Statement">for</span> a resource-server to check <span class="Statement">if</span> the token
@@ -173,7 +173,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 		<span class="rainbow_p0">)</span>
 
 		iudx_auth.introspect_token<span class="rainbow_p0">(</span>
-			<span class="Constant">&quot;auth.iudx.org.in/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
+			<span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
 		<span class="rainbow_p0">)</span>
 
 	<span class="Statement">Example 2</span>:
@@ -186,13 +186,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 		key  = <span class="Constant">&quot;private-key.pem&quot;</span>
 
 		my_trusted_auth_servers = <span class="rainbow_p0">{</span>
-			<span class="Constant">&quot;auth.iudx.org.in&quot;</span>		: auth.Auth<span class="rainbow_p1">(</span>cert<span class="rainbow_o1">,</span>key<span class="rainbow_o1">,</span><span class="Constant">&quot;auth.iudx.org.in&quot;</span><span class="rainbow_p1">)</span><span class="rainbow_o0">,</span>
+			<span class="Constant">&quot;auth.datasetu.org&quot;</span>		: auth.Auth<span class="rainbow_p1">(</span>cert<span class="rainbow_o1">,</span>key<span class="rainbow_o1">,</span><span class="Constant">&quot;auth.datasetu.org&quot;</span><span class="rainbow_p1">)</span><span class="rainbow_o0">,</span>
 			<span class="Constant">&quot;my.auth.server.com&quot;</span>		: auth.Auth<span class="rainbow_p1">(</span>cert<span class="rainbow_o1">,</span>key<span class="rainbow_o1">,</span><span class="Constant">&quot;my.auth.server.com&quot;</span><span class="rainbow_p1">)</span><span class="rainbow_o0">,</span>
 			<span class="Constant">&quot;third.party.auth.com&quot;</span>	: auth.Auth<span class="rainbow_p1">(</span>cert<span class="rainbow_o1">,</span>key<span class="rainbow_o1">,</span><span class="Constant">&quot;third.party.auth.com&quot;</span><span class="rainbow_p1">)</span><span class="rainbow_o0">,</span>
 		<span class="rainbow_p0">}</span>
 
 		# received token from consumer
-		token = <span class="Constant">&quot;auth.iudx.org.in/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
+		token = <span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
 
 		<span class="Statement">try</span>:
 			token_auth_server	= token.split<span class="rainbow_p0">(</span><span class="Constant">&quot;/&quot;</span><span class="rainbow_p0">)[</span><span class="Constant">0</span><span class="rainbow_p0">]</span>
@@ -206,13 +206,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 	<span class="Statement">Request</span>:
 
-		curl -XPOST <a style="color:#F4D03F" href=https://auth.iudx.org.in/auth/v1/token/introspect>https://auth.iudx.org.in/auth/v1/token/introspect</a>
+		curl -XPOST <a style="color:#F4D03F" href=https://auth.datasetu.org/auth/v1/token/introspect>https://auth.datasetu.org/auth/v1/token/introspect</a>
 
 			--cert resource-server-certificate.pem --key private-key.pem
 
 			-H 'content-type: application/json'
 
-			-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;token&quot;</span>: <span class="Constant">&quot;auth.iudx.org.in/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">}</span>'
+			-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;token&quot;</span>: <span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">}</span>'
 
 	<span class="Statement">Response</span>:
 
@@ -261,7 +261,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 <span class="Statement">See also</span>:
 
 	<span class="Statement">token API</span>:
-		<a style="color:#F4D03F" href=http://auth.iudx.org.in/token.html>http://auth.iudx.org.in/token.html</a>
+		<a style="color:#F4D03F" href=http://auth.datasetu.org/token.html>http://auth.datasetu.org/token.html</a>
 
 
 </pre>

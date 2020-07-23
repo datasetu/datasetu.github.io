@@ -3,17 +3,17 @@
 	<head>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
 		<meta content="utf-8" http-equiv="encoding"/>
-		<link rel="stylesheet" href="json-viewer.css"/>
-		<link rel="stylesheet" href="my.css"/>
-		<script src="json-viewer.min.js"></script>
+		<link rel="stylesheet" href="../ui/json-viewer.css"/>
+		<link rel="stylesheet" href="../ui/my.css"/>
+		<script src="../ui/json-viewer.min.js"></script>
 		<script>
-			var api = "group/delete";
+			var api = "token/revoke";
 		</script>
-		<script src="my.js"></script>
+		<script src="../ui/my.js"></script>
 	</head>
 	<body onLoad="init();">
 		<div class="center-screen">
-			<h2><code>API : /auth/v1/group/delete<span id=dots style="visibility:hidden"> ...</span></code></h2>
+			<h2><code>API : /auth/v1/token/revoke<span id=dots style="visibility:hidden"> ...</span></code></h2>
 			<table>
 			<tr><td align=center>
 			<form id=request onsubmit="return false;">
@@ -22,18 +22,23 @@
 					<table>
 						<tr>
 							<td style="padding:15px" align=right>
-								<code>consumer<font color=red>*</font></code>
+								<code>tokens<font color=red>*</font></code>
 							</td>
 							<td>
-								<input autofocus name=consumer type=text placeholder=" consumer's email id">
+								<input autofocus name=tokens type=text placeholder=" JSON array of tokens">
+							</td>
+						</tr>
+						<tr>
+							<td align=center colspan=2>
+								<b><code>OR</code></b>
 							</td>
 						</tr>
 						<tr>
 							<td style="padding:15px" align=right>
-								<code>group<font color=red>*</font></code>
+								<code>token-hashes<font color=red>*</font></code>
 							</td>
 							<td>
-								<input name=group type=text placeholder=" the group name">
+								<input name=token_hashes type=text placeholder=" JSON array of token-hashes">
 							</td>
 						</tr>
 						<tr>
