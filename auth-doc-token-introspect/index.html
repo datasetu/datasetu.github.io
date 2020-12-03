@@ -128,14 +128,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 	Check if the ID is valid and can be served by the resource-server.
 
-	A valid IUDX token consist of 3 fields <span class="rainbow_p0">(</span>delimited by <span class="Constant">'/'</span><span class="rainbow_p0">)</span>:
+	A valid DataSetu token consist of 2 fields <span class="rainbow_p0">(</span>delimited by <span class="Constant">'~'</span><span class="rainbow_p0">)</span>:
 
 		<span class="Constant">1.</span> Who has issued the token <span class="rainbow_p0">(</span>The Auth server<span class="rainbow_p0">)</span>
-		<span class="Constant">2.</span> To whom the token has been issued <span class="rainbow_p0">(</span>The consumer<span class="rainbow_p0">)</span>
-		<span class="Constant">3.</span> Random string
+		<span class="Constant">2.</span> Random string
 
 	<span class="Statement">For example</span>:
-		<span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
+		<span class="Constant">&quot;auth.datasetu.org~1802a84d157ff4d113150aeca8bdacee&quot;</span>
 
 	<span class="Statement">NOTE</span>:
 	It is important <span class="Statement">for</span> a resource-server to check <span class="Statement">if</span> the token
@@ -173,7 +172,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 		<span class="rainbow_p0">)</span>
 
 		iudx_auth.introspect_token<span class="rainbow_p0">(</span>
-			<span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
+			<span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span>
 		<span class="rainbow_p0">)</span>
 
 	<span class="Statement">Example 2</span>:
@@ -192,7 +191,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 		<span class="rainbow_p0">}</span>
 
 		# received token from consumer
-		token = <span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span>
+		token = <span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span>
 
 		<span class="Statement">try</span>:
 			token_auth_server	= token.split<span class="rainbow_p0">(</span><span class="Constant">&quot;/&quot;</span><span class="rainbow_p0">)[</span><span class="Constant">0</span><span class="rainbow_p0">]</span>
@@ -212,7 +211,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 			-H 'content-type: application/json'
 
-			-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;token&quot;</span>: <span class="Constant">&quot;auth.datasetu.org/arun.babu@rbccps.org/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">}</span>'
+			-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;token&quot;</span>: <span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">}</span>'
 
 	<span class="Statement">Response</span>:
 

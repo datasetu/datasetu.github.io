@@ -183,8 +183,8 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 			content-type : <span class="Constant">&quot;application/json&quot;</span>
 
 			<span class="rainbow_p0">{</span>
-				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_o0">,</span>
-				<span class="Constant">&quot;token-type&quot;</span>	: <span class="Constant">&quot;IUDX&quot;</span><span class="rainbow_o0">,</span>
+				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_o0">,</span>
+				<span class="Constant">&quot;token-type&quot;</span>	: <span class="Constant">&quot;DATASETU&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;expires-in&quot;</span>	: <span class="Constant">3600</span><span class="rainbow_o0">,</span>
 
 				<span class="Constant">&quot;server-token&quot;</span>	: <span class="rainbow_p1">{</span>
@@ -198,14 +198,13 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 			Is the access token required to access data from a resource server
 			<span class="rainbow_p0">(</span><span class="Constant">&quot;rs.com&quot;</span> in this <span class="Statement">case</span><span class="rainbow_p0">)</span>, and is in the format: 'auth-server/consumer/random-bytes'
 
-			A valid IUDX token consist of 3 fields <span class="rainbow_p0">(</span>delimited by <span class="Constant">'/'</span><span class="rainbow_p0">)</span>:
+			A valid DataSetu token consist of 2 fields <span class="rainbow_p0">(</span>delimited by <span class="Constant">'~'</span><span class="rainbow_p0">)</span>:
 
 				<span class="Constant">1.</span> Who has issued the token <span class="rainbow_p0">(</span>The Auth server<span class="rainbow_p0">)</span>
-				<span class="Constant">2.</span> To whom the token has been issued <span class="rainbow_p0">(</span>The consumer<span class="rainbow_p0">)</span>
-				<span class="Constant">3.</span> Random string
+				<span class="Constant">2.</span> Random string
 
 			<span class="Statement">In the above example</span>:
-				token = <span class="Constant">&quot;auth.datasetu.org/user@domain.com/2204adcbc990ffff234689aaabcdef90&quot;</span>
+				token = <span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span>
 
 		<span class="Constant">2.</span> expires-in
 			Indicates how <span class="Type">long</span> the token is valid in seconds.
@@ -238,7 +237,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 			content-type : <span class="Constant">&quot;application/json&quot;</span>
 
 			<span class="rainbow_p0">{</span>
-				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span><span class="rainbow_o0">,</span>
+				<span class="Constant">&quot;token&quot;</span>	: <span class="Constant">&quot;auth.datasetu.org~1802a84d157ff4d113150aeca8bdacee&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;token-type&quot;</span>	: <span class="Constant">&quot;IUDX&quot;</span><span class="rainbow_o0">,</span>
 				<span class="Constant">&quot;expires-in&quot;</span>	: <span class="Constant">3600</span><span class="rainbow_o0">,</span>
 
@@ -263,7 +262,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 				along with the consumer's <span class="Constant">&quot;token&quot;</span>.
 
 				<span class="Statement">In the above example</span>:
-					token = <span class="Constant">&quot;auth.datasetu.org/user@domain.com/1802a84d157ff4d113150aeca8bdacee&quot;</span>
+					token = <span class="Constant">&quot;auth.datasetu.org~1802a84d157ff4d113150aeca8bdacee&quot;</span>
 
 				and the <span class="Constant">&quot;server-token&quot;</span> when a consumer requests data from:
 
