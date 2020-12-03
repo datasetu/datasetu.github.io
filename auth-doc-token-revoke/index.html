@@ -76,7 +76,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 	# as a data consumer
 	iudx_auth		= auth.Auth<span class="rainbow_p0">(</span><span class="Constant">&quot;consumer-certificate.pem&quot;</span><span class="rainbow_o0">,</span><span class="Constant">&quot;private-key.pem&quot;</span><span class="rainbow_p0">)</span>
-	tokens_to_revoke	= <span class="rainbow_p0">[</span><span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">]</span>
+	tokens_to_revoke	= <span class="rainbow_p0">[</span><span class="Constant">&quot;auth.datasetu.org/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p0">]</span>
 
 	iudx_auth.revoke_tokens<span class="rainbow_p0">(</span>tokens_to_revoke<span class="rainbow_p0">)</span>
 
@@ -96,7 +96,7 @@ body { font-family: monospace; color: #ffffff; background-color: #000000; }
 
 		-H 'content-type: application/json'
 
-		-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;tokens&quot;</span> : <span class="rainbow_p1">[</span><span class="Constant">&quot;auth.datasetu.org~2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p1">]</span><span class="rainbow_p0">}</span>
+		-d '<span class="rainbow_p0">{</span><span class="Constant">&quot;tokens&quot;</span> : <span class="rainbow_p1">[</span><span class="Constant">&quot;auth.datasetu.org/2204adcbc990ffff234689aaabcdef90&quot;</span><span class="rainbow_p1">]</span><span class="rainbow_p0">}</span>
 
 
 	<span class="Statement">Response</span>:
